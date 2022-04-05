@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteTargetsManager">
+    <targets>
+      <target name="s336424@helios.se.ifmo.ru:2222" type="ssh/sftp">
+        <config>
+          <option name="projectRootOnTarget" value="/home/s336424/proga-lab5" />
+          <option name="serverName" value="s336424@helios.se.ifmo.ru:2222 password" />
+        </config>
+        <ContributedStateBase type="JavaLanguageRuntime">
+          <config />
+        </ContributedStateBase>
+      </target>
+    </targets>
+  </component>
+</project>
