@@ -1,6 +1,3 @@
-import java.util.Date;
-import java.util.Scanner;
-
 /**
  * Класс клиент
  */
@@ -92,11 +89,6 @@ public class Computer {
                     break;
                 case "filter_less_than_comment":
                     i.filter_less_than_comment();
-                    break;
-                case "rer":
-                    System.out.println(Main.script);
-                    System.out.println(Main.str);
-                    System.out.println(Main.lineCounter);
                     break;
                 default:
                     System.out.println("Такой команды не существует");

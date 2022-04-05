@@ -1,4 +1,4 @@
-public class Add_If_MinCommand implements Command{
+public class Add_If_MinCommand implements Command {
     private Receiver theReceiver;
 
 

@@ -1,4 +1,4 @@
-public class Filter_Less_Than_CommentCommand implements Command{
+public class Filter_Less_Than_CommentCommand implements Command {
     private Receiver theReceiver;
 
 

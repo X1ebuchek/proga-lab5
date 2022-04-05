@@ -1,4 +1,4 @@
-public class ClearCommand implements Command{
+public class ClearCommand implements Command {
     private Receiver theReceiver;
 
 

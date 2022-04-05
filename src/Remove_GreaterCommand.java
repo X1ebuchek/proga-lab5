@@ -1,4 +1,4 @@
-public class Remove_GreaterCommand implements Command{
+public class Remove_GreaterCommand implements Command {
     private Receiver theReceiver;
 
 

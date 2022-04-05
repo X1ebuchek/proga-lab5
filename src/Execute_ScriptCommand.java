@@ -1,4 +1,4 @@
-public class Execute_ScriptCommand implements Command{
+public class Execute_ScriptCommand implements Command {
     private Receiver theReceiver;
 
 

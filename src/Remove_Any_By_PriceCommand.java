@@ -1,4 +1,4 @@
-public class Remove_Any_By_PriceCommand implements Command{
+public class Remove_Any_By_PriceCommand implements Command {
     private Receiver theReceiver;
 
 

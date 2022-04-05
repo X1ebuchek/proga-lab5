@@ -14,6 +14,7 @@ public class Receiver {
     Reader reader = new Reader();
     static String scriptNow = "";
     static boolean error = false;
+    static boolean kek = false;
 
     /**
      * выводит справку по доступным командам
@@ -200,7 +201,7 @@ public class Receiver {
 
         String description = "";
         while (true) {
-            System.out.print("Хотите ввести описание (YES|NO): ");
+            System.out.print("Хотите ввести описание (YES/NO): ");
             String s = reader.read(scriptNow).toUpperCase();
             if (s.equals("YES")) {
                 System.out.print("Введите описание: ");
@@ -563,6 +564,8 @@ public class Receiver {
      * считывает и исполняет скрипт из указанного файла
      */
     public void execute_scriptCommand() {
+        //System.out.println("Скрипт выполнился");
+//        String s = Main.sc.next();
         String s = "";
         while (true) {
             s = reader.read(scriptNow);
@@ -571,7 +574,9 @@ public class Receiver {
             else {
                 System.out.println("Такого файла не существует");
                 if (Main.script){
-                    error = true;
+                    Main.script = false;
+                    Main.lineCounter = 0;
+                    Main.str = "";
                     return;
                 }
                 return;
@@ -597,6 +602,8 @@ public class Receiver {
                 Main.lineCounter = 0;
                 Main.str = "";
                 error = false;
+                scriptNow = "";
+                kek = true;
                 return;
             }
             System.out.print("Введите команду: ");

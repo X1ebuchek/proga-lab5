@@ -1,4 +1,4 @@
-public class ExitCommand implements Command{
+public class ExitCommand implements Command {
     private Receiver theReceiver;
 
 

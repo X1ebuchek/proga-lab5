@@ -1,4 +1,4 @@
-public class SaveCommand implements Command{
+public class SaveCommand implements Command {
     private Receiver theReceiver;
 
 

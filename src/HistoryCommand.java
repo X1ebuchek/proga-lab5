@@ -1,4 +1,4 @@
-public class HistoryCommand implements Command{
+public class HistoryCommand implements Command {
     private Receiver theReceiver;
 
 

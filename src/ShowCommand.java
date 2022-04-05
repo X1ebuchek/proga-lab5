@@ -1,4 +1,4 @@
-public class ShowCommand implements Command{
+public class ShowCommand implements Command {
     private Receiver theReceiver;
 
     public ShowCommand(Receiver receiver){

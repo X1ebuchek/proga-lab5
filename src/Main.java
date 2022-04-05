@@ -16,6 +16,7 @@ public class Main {
     public static boolean script = false;
     public static int lineCounter = 0;
     public static Scanner sc1;
+    public static int count = 0;
     public static Scanner sc = new Scanner(System.in);
 
     static {

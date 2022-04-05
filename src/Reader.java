@@ -10,14 +10,20 @@ public class Reader {
     static long w = 0;
 
     public String read(String n){
-        if (!Main.str.equals(n)){
-            if (Main.lineCounter==0){
-                Main.lineCounter = LineCounter.count(n);
-            }
+        if (!Main.str.equals(n) || Receiver.kek){
+            Receiver.kek = false;
+//            if (Main.lineCounter==0){
+//                Main.lineCounter = LineCounter.count(n);
+//            }
             Main.str = n;
             Main.sc = new Scanner(System.in);
             try {
                 File file = new File(n);
+                Main.sc1 = new Scanner(file);
+                while (Main.sc1.hasNext()) {
+                    String s = Main.sc1.nextLine();
+                    Main.lineCounter++;
+                }
                 Main.sc1 = new Scanner(file);
                 if (Main.sc1.hasNext()){
                     String q = Main.sc1.next();

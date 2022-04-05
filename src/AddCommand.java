@@ -1,4 +1,4 @@
-public class AddCommand implements Command{
+public class AddCommand implements Command {
     private Receiver theReceiver;
 
 
