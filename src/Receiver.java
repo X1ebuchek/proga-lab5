@@ -470,7 +470,7 @@ public class Receiver {
 
         Ticket ticket = new Ticket(id, name, c, new Date(), price, comment, refundable, TicketType.valueOf(type), e);
         for (int i = 0; i < Main.list.size(); i++) {
-            if (id == Main.list.get(i).getId()) {
+            if (id.equals(Main.list.get(i).getId())) {
                 Main.list.set(i, ticket);
             }
         }
@@ -623,6 +623,10 @@ public class Receiver {
      * добавляет новый элемент в коллекцию, если его значение меньше, чем у наименьшего элемента этой коллекции
      */
     public void add_if_minCommand() {
+        if (Main.list.size() == 0){
+            System.out.println("Коллекция пуста");
+            return;
+        }
         Long id = System.currentTimeMillis();
         System.out.print("Введите имя: ");
         String name = reader.read(scriptNow);
@@ -814,6 +818,10 @@ public class Receiver {
      * удаляет из коллекции все элементы, превышающие заданный
      */
     public void remove_greaterCommand() {
+        if (Main.list.size()==0){
+            System.out.println("Коллекция пуста");
+            return;
+        }
         Long id = System.currentTimeMillis();
         System.out.print("Введите имя: ");
         String name = reader.read(scriptNow);
