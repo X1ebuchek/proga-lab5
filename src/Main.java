@@ -30,13 +30,7 @@ public class Main {
         Event e = new Event(20, "event", "description", EventType.BASEBALL);
         Ticket t = new Ticket(10L, "name", c, creationDate, 100.9, "base", true, TicketType.USUAL, e);
         Ticket t1 = new Ticket(10L, "name12", c, creationDate, 150.7, "base", true, TicketType.USUAL, e);
-        Comparator<Ticket> sortById = new Comparator<Ticket>() {
-            @Override
-            public int compare(Ticket o1, Ticket o2) {
-                return (int) (o1.getId()-o2.getId());
-            }
-        };
-        list.sort(sortById);
+
 
         while (true){
             System.out.print("Введите команду: ");
