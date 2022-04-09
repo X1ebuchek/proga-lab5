@@ -381,8 +381,18 @@ public class Receiver {
         while (true) {
             System.out.print("Введите возможность возврата: ");
             try {
-                refundable = Boolean.parseBoolean(reader.read(scriptNow));
-                break;
+                String s = reader.read(scriptNow).toLowerCase();
+                if (s.equals("true") || s.equals("false")){
+                    refundable = Boolean.parseBoolean(s);
+                    break;
+                }
+                else{
+                    System.out.println("Некорректное значение. Возможность возврата должна быть типа boolean");
+                    if (Main.script){
+                        error = true;
+                        return;
+                    }
+                }
             } catch (Exception e) {
                 System.out.println("Некорректное значение. Возможность возврата должна быть типа boolean");
                 if (Main.script){
@@ -606,6 +616,7 @@ public class Receiver {
                 kek = true;
                 return;
             }
+            kek = false;
             System.out.print("Введите команду: ");
             s1 = reader.read(scriptNow);
             Computer.loop(s1);
@@ -722,8 +733,18 @@ public class Receiver {
         while (true) {
             System.out.print("Введите возможность возврата: ");
             try {
-                refundable = Boolean.parseBoolean(reader.read(scriptNow));
-                break;
+                String s = reader.read(scriptNow).toLowerCase();
+                if (s.equals("true") || s.equals("false")){
+                    refundable = Boolean.parseBoolean(s);
+                    break;
+                }
+                else{
+                    System.out.println("Некорректное значение. Возможность возврата должна быть типа boolean");
+                    if (Main.script){
+                        error = true;
+                        return;
+                    }
+                }
             } catch (Exception e) {
                 System.out.println("Некорректное значение. Возможность возврата должна быть типа boolean");
                 if (Main.script){
@@ -917,8 +938,18 @@ public class Receiver {
         while (true) {
             System.out.print("Введите возможность возврата: ");
             try {
-                refundable = Boolean.parseBoolean(reader.read(scriptNow));
-                break;
+                String s = reader.read(scriptNow).toLowerCase();
+                if (s.equals("true") || s.equals("false")){
+                    refundable = Boolean.parseBoolean(s);
+                    break;
+                }
+                else{
+                    System.out.println("Некорректное значение. Возможность возврата должна быть типа boolean");
+                    if (Main.script){
+                        error = true;
+                        return;
+                    }
+                }
             } catch (Exception e) {
                 System.out.println("Некорректное значение. Возможность возврата должна быть типа boolean");
                 if (Main.script){

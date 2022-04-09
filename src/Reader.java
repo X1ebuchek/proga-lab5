@@ -10,13 +10,13 @@ public class Reader {
     static long w = 0;
 
     public String read(String n){
+        if (n.isEmpty()){
+            Main.str = "";
+            return Main.sc.next();
+        }
         if (!Main.str.equals(n) || Receiver.kek){
             Receiver.kek = false;
-//            if (Main.lineCounter==0){
-//                Main.lineCounter = LineCounter.count(n);
-//            }
             Main.str = n;
-            Main.sc = new Scanner(System.in);
             try {
                 File file = new File(n);
                 Main.sc1 = new Scanner(file);
@@ -49,7 +49,7 @@ public class Reader {
                 return Main.sc.next();
             }
         }
-        if (Main.sc1.hasNext()){
+        if (!(Main.sc1 == null) && Main.sc1.hasNext()){
             String e = Main.sc1.next();
             System.out.println(e);
             if (e.equals("update") || e.equals("remove_by_id") || e.equals("execute_script") || e.equals("remove_any_by_price")
